@@ -1,0 +1,64 @@
+{
+  "contract": "imdb_quality",
+  "timestamp": "2026-06-25T23:05:09",
+  "n_rows": 2000,
+  "summary": {
+    "total": 7,
+    "passed": 6,
+    "failed": 1
+  },
+  "rules": {
+    "no_nulls": {
+      "passed": true,
+      "severity": "error",
+      "details": {
+        "null_text": 0,
+        "null_label": 0
+      }
+    },
+    "labels_in_set": {
+      "passed": true,
+      "severity": "error",
+      "details": {
+        "unexpected_labels": []
+      }
+    },
+    "class_balance": {
+      "passed": true,
+      "severity": "error",
+      "details": {
+        "ratio_pos_to_neg": 1.0,
+        "n_pos": 1000,
+        "n_neg": 1000
+      }
+    },
+    "min_word_count": {
+      "passed": true,
+      "severity": "warning",
+      "details": {
+        "reviews_under_5_words": 0
+      }
+    },
+    "max_word_count": {
+      "passed": true,
+      "severity": "warning",
+      "details": {
+        "reviews_over_2000_words": 0
+      }
+    },
+    "no_duplicates": {
+      "passed": true,
+      "severity": "warning",
+      "details": {
+        "duplicate_texts": 0
+      }
+    },
+    "no_html_tags": {
+      "passed": false,
+      "severity": "warning",
+      "details": {
+        "reviews_with_html": 1189
+      }
+    }
+  }
+}
